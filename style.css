@@ -36,6 +36,26 @@
     background-color:#6d6d6d;
 }
 
+@media screen and (min-width: 600px) {
+    .nav-bar {
+        width: 10em;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+    .nav-bar > ul {
+        width: 100%;
+        margin-top: calc(50vh - 4.5em);
+        /* vertically centered by calculating 50% of viewport height minus 50% of element height */
+    }
+    .nav-bar > ul > li {
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 2em;
+        padding-top: 1em;
+    }
+}
+
 /* A11Y */
 
 .visually-hidden a { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
@@ -53,7 +73,7 @@
     display: inline-block;
     overflow: visible;
     width:auto; height:auto;  
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: pink;
     clip: rect(20px, 20px, 20px, 20px);
     z-index: 2;

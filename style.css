@@ -10,6 +10,7 @@
 .nav-bar > ul {
     position: absolute;
     right: 0;
+    top: 0;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
@@ -33,6 +34,29 @@
 .nav-bar a:focus {
     color: #99bafe;
     background-color:#6d6d6d;
+}
+
+/* A11Y */
+
+.visually-hidden a { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.visually-hidden :focus,
+.visually-hidden input:focus,
+.visually-hidden button:focus { 
+    position:static !important; 
+    display: inline-block;
+    overflow: visible;
+    width:auto; height:auto;  
+    font-size: 3rem;
+    color: pink;
+    clip: rect(20px, 20px, 20px, 20px);
+    z-index: 2;
 }
 
 

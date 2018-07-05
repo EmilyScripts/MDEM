@@ -1,4 +1,11 @@
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 /* Navigation - mobile first*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
@@ -112,56 +119,6 @@
 }
 
 
-
-/* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
-/* May want to update media query to REM units */
-
-@media screen and (min-width: 600px) {
-    /* Screen res wider than 600px */
-    .nav-bar {
-        min-width: 10em;
-        width: 20vw;
-        height: 95vh;
-        right: 2.5vh;
-        top: 2.5vh;
-    }
-    .nav-bar > ul {
-        width: 100%;
-        margin-right: 0;
-        /* remove margin that puts a space to the right of menu items in mobile view */
-        margin-top: calc(50vh - 4.5em);
-        /* vertically centered by calculating 50% of parent element height minus 50% of element height */
-        /* 4.5em calculated by halving the height of the nav text's (.nav-bar > ul > li) 3 list items (height 2em each) and 3 padding top (1em each) = 9em */
-    }
-    .nav-bar > ul > li {
-        display: block;
-        margin: 0 auto 0 auto;
-        height: 2em;
-        padding-top: 1em;
-    }
-
-    #nav-logo {
-        height: 20vmin;
-        width: 20vmin;
-        left: -10vmin;
-        top: 7vmin;
-        top: calc(25vh - 3rem - 10vmin)
-        /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
-    }
-
-    #nav-logo img {
-        margin-left: -1.29vmin;
-    }
-
-    @media screen and (max-height: 380px) {
-        #nav-logo {
-            display: none;
-            /* For now, we're hiding the logo when the window height is prohibitively low */
-        }
-    }
-}
-
-
 /*main*/
 main {
     font-size: 1.5rem;
@@ -169,25 +126,47 @@ main {
 
 section {
     /*border: 1px solid red;*/
-    padding: 10%;
+    padding-top: 3.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
+
 
 h1 {
     font-size: 3rem;
-    margin: 100px auto 50px auto;
+    /* margin: 100px auto 50px auto; */
     top: 10vh;
     text-align: center;
-    height: 45vh;
     /* border: 1px solid blue; */
     font-weight: 700;
+    height: 50vh;
+    border: 1px solid blue;
+    /* padding-top: calc((100%-3rem)/2); */
+}
+
+#about > p {
+    text-align: center;
+    height: 50vh;
+}
+
+.centre-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 h3 {
     font-size: 2rem;
-    width: 80%;
+    width: 50vw;
+    margin-right: 20%;
+    margin-left: 5%;
     text-align: center;
+    padding-bottom: 5%;
     /*border: 1px solid gold;*/
 }
+
+
 
 p {
     font-size: 1.25rem;
@@ -195,6 +174,9 @@ p {
 
 #about {
     background-color: #73b3e6;
+    /* padding-top: 5.5rem;
+    padding-bottom: 2rem; */
+    height: 100vh;
 }
 
 #team {
@@ -214,13 +196,15 @@ p {
 .member {
     /*border: 1px solid pink;*/
     width: 100%;
-    margin-top: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .memberpicture {
-    height: auto;
-    width: 70%;
-    margin: 5%;
+    height: 50vw;
+    /* height: calc(45vw - 2.5vh - 20px); */
+    width: auto;
+    margin: 0 5% 0 5%;
     display: inline-block;
 }
 
@@ -230,6 +214,7 @@ p {
     /*display: flex;*/
     padding: 10%;
     filter: invert(100%) brightness(75%);
+    margin: 3px;
 }
 
 a:focus > .memberlogo,
@@ -239,14 +224,14 @@ a:hover > .memberlogo {
 
 .logonav {
     width: calc(20% - 2px);
-    height: auto;
+    height: 50vw;
     /*border: 1px solid green;*/
     position: inline;
     float: right;
     display: flex;
     flex-direction: column;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    /* padding-top: 10%; */
+    /* padding-bottom: 10%; */
 }
 
 /* Contact form */
@@ -304,3 +289,70 @@ input[type=submit]:focus {
 
 
 /*need to add media queries*/
+
+
+/* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
+/* May want to update media query to REM units */
+
+@media screen and (min-width: 680px) {
+    /* Screen res wider than 680px */
+    .nav-bar {
+        min-width: 10em;
+        width: 20vw;
+        height: 95vh;
+        right: 2.5vh;
+        top: 2.5vh;
+    }
+    .nav-bar > ul {
+        width: 100%;
+        margin-right: 0;
+        /* remove margin that puts a space to the right of menu items in mobile view */
+        margin-top: calc(50vh - 4.5em);
+        /* vertically centered by calculating 50% of parent element height minus 50% of element height */
+        /* 4.5em calculated by halving the height of the nav text's (.nav-bar > ul > li) 3 list items (height 2em each) and 3 padding top (1em each) = 9em */
+    }
+    .nav-bar > ul > li {
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 2em;
+        padding-top: 1em;
+    }
+    #nav-logo {
+        height: 20vmin;
+        width: 20vmin;
+        left: -10vmin;
+        /* top: 7vmin; */
+        top: calc(25vh - 3rem - 10vmin)
+        /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
+    }
+
+    #nav-logo img {
+        margin-left: -10vmin;
+    }
+
+    @media screen and (max-height: 380px) {
+        #nav-logo {
+            display: none;
+            /* For now, we're hiding the logo when the window height is prohibitively low */
+        }
+    }
+
+    /* Changing section/content to fit with nav for desktop/landscape */
+
+    section {
+        padding-right: calc(20vw + 2.5vh + 20px);
+    }
+
+    h1 {
+        max-width: calc(100vw - 15rem);
+    }
+
+    #about > p {
+        max-width: calc(100vw - 15rem);
+    }
+
+    /*for main member img resize*/
+    .memberpicture {
+        height: calc(45vw - 2.5vh - 20px);
+    }
+}

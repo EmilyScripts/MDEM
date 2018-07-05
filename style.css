@@ -1,7 +1,154 @@
-/*nav*/
+
+/* Navigation - mobile first*/
+
+.nav-bar {
+    background: #333;
+    position: fixed;
+    width: 100%;
+    height: 3.5rem;
+    /* Using rem units so user can update base font size */
+}
+
+.nav-bar > ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 0.2rem;
+}
+
+.nav-bar > ul > li {
+    display: inline-block;
+    /* inline elements go horizontally, but need inline-block to be able to assign width and height... WE THINK (double check this hah) */
+    font-family: sans-serif;
+    width: 4em;
+    text-align: center;
+}
+
+.nav-bar a,
+.nav-bar a:visited,
+.nav-bar a:active {
+    color: #d7e3f5;
+    text-decoration: none;
+    padding: 0.1em;
+}
+
+.nav-bar a:hover,
+.nav-bar a:focus {
+    color: #99bafe;
+    background-color:#6d6d6d;
+}
+
+#nav-logo {
+    display: none;
+}
+
+@media screen and (min-width: 400px) {
+
+/* Hide logo until screen width > 400px */
+
+   /* NAV LOGO */
+#nav-logo {
+    display: block;
+    border-radius: 50%;
+    /* circle */
+    border: 3px solid gainsboro;
+    height: 15vmin;
+    width: 15vmin;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    overflow: hidden;
+    /* stop image appearing outside of this circular logo holder */
+}
+
+#nav-logo img {
+    height: 100%;
+    margin: 0 auto;
+    margin-left: -7.5vmin;
+    /* centring image as the image is landscape (width is 2x height = 30vmin) so needs to be moved -7.5vmin */
+}
+
+}
+
+/* A11Y */
+
+.visually-hidden a { 
+    /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.visually-hidden :focus,
+.visually-hidden input:focus,
+.visually-hidden button:focus { 
+    position:static !important; 
+    display: inline-block;
+    overflow: visible;
+    width:auto; height:auto;  
+    font-size: 1.5rem;
+    color: pink;
+    clip: rect(20px, 20px, 20px, 20px);
+    z-index: 2;
+    /* This should be refactored and commented properly before going live. E.g. z-index likely no longer needed */
+}
+
+.drop-shadow {
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.7);
+}
 
 
 
+/* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
+/* May want to update media query to REM units */
+
+@media screen and (min-width: 600px) {
+    /* Screen res wider than 600px */
+    .nav-bar {
+        min-width: 10em;
+        width: 20vw;
+        height: 95vh;
+        right: 2.5vh;
+        top: 2.5vh;
+    }
+    .nav-bar > ul {
+        width: 100%;
+        margin-right: 0;
+        /* remove margin that puts a space to the right of menu items in mobile view */
+        margin-top: calc(50vh - 4.5em);
+        /* vertically centered by calculating 50% of parent element height minus 50% of element height */
+        /* 4.5em calculated by halving the height of the nav text's (.nav-bar > ul > li) 3 list items (height 2em each) and 3 padding top (1em each) = 9em */
+    }
+    .nav-bar > ul > li {
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 2em;
+        padding-top: 1em;
+    }
+    #nav-logo {
+        height: 20vmin;
+        width: 20vmin;
+        left: -10vmin;
+        /* top: 7vmin; */
+        top: calc(25vh - 3rem - 10vmin)
+        /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
+    }
+
+    #nav-logo img {
+        margin-left: -10vmin;
+    }
+
+    @media screen and (max-height: 380px) {
+        #nav-logo {
+            display: none;
+            /* For now, we're hiding the logo when the window height is prohibitively low */
+        }
+    }
+}
 
 
 /*main*/
@@ -74,3 +221,4 @@ p {
     padding-bottom: 10%;
 }
 /*need to add media queries*/
+>>>>>>> master

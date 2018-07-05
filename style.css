@@ -6,21 +6,21 @@
 
 /*main*/
 main {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
+
 section {
     /*border: 1px solid red;*/
     padding: 10%;
 }
 
-
-
 h1 {
     font-size: 3rem;
     margin: 100px auto 50px auto;
+    top: 10vh;
     text-align: center;
-   /* border: 1px solid blue;*/
-    
+    height: 45vh;
+    border: 1px solid blue;*/
 }
 
 h3 {
@@ -33,36 +33,36 @@ h3 {
 p {
     font-size: 1.25rem;
 }
+
 #about {
     background-color: #73b3e6;
 }
+
 #team {
     background-color: lightpink;
 }
 
-article {
+.member {
     /*border: 1px solid pink;*/
     width: 100%;
     margin-top: 10%;
-   
 }
 
-.picture {
+.memberpicture {
     height: auto;
     width: 70%;
     margin: 5%;
     display: inline-block;
 }
 
-.logo {
+.memberlogo {
     height: auto;
     width: 80%;
     /*display: flex;*/
     padding: 10%;
-   
 }
 
-article nav {
+.logonav {
     width: calc(20% - 2px);
     height: auto;
     /*border: 1px solid green;*/
@@ -72,7 +72,5 @@ article nav {
     flex-direction: column;
     padding-top: 10%;
     padding-bottom: 10%;
-   
-
-
 }
+/*need to add media queries*/

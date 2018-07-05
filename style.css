@@ -140,7 +140,6 @@ h1 {
     /* border: 1px solid blue; */
     font-weight: 700;
     height: 50vh;
-    border: 1px solid blue;
     /* padding-top: calc((100%-3rem)/2); */
 }
 
@@ -236,7 +235,7 @@ a:hover > .memberlogo {
 
 /* Contact form */
 #contact {
-    height: 100vh;
+    height: 101vh;
 }
 
 #contact-form {
@@ -327,7 +326,7 @@ input[type=submit]:focus {
     }
 
     #nav-logo img {
-        margin-left: -10vmin;
+        margin-left: -1.29vmin;
     }
 
     @media screen and (max-height: 380px) {

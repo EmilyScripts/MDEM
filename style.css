@@ -109,55 +109,6 @@ html {
 }
 
 
-
-/* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
-/* May want to update media query to REM units */
-
-@media screen and (min-width: 600px) {
-    /* Screen res wider than 600px */
-    .nav-bar {
-        min-width: 10em;
-        width: 20vw;
-        height: 95vh;
-        right: 2.5vh;
-        top: 2.5vh;
-    }
-    .nav-bar > ul {
-        width: 100%;
-        margin-right: 0;
-        /* remove margin that puts a space to the right of menu items in mobile view */
-        margin-top: calc(50vh - 4.5em);
-        /* vertically centered by calculating 50% of parent element height minus 50% of element height */
-        /* 4.5em calculated by halving the height of the nav text's (.nav-bar > ul > li) 3 list items (height 2em each) and 3 padding top (1em each) = 9em */
-    }
-    .nav-bar > ul > li {
-        display: block;
-        margin: 0 auto 0 auto;
-        height: 2em;
-        padding-top: 1em;
-    }
-    #nav-logo {
-        height: 20vmin;
-        width: 20vmin;
-        left: -10vmin;
-        /* top: 7vmin; */
-        top: calc(25vh - 3rem - 10vmin)
-        /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
-    }
-
-    #nav-logo img {
-        margin-left: -10vmin;
-    }
-
-    @media screen and (max-height: 380px) {
-        #nav-logo {
-            display: none;
-            /* For now, we're hiding the logo when the window height is prohibitively low */
-        }
-    }
-}
-
-
 /*main*/
 main {
     font-size: 1.5rem;
@@ -249,5 +200,67 @@ p {
     padding-top: 10%;
     padding-bottom: 10%;
 }
-/*need to add media queries*/
->>>>>>> master
+
+
+
+/* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
+/* May want to update media query to REM units */
+
+@media screen and (min-width: 680px) {
+    /* Screen res wider than 680px */
+    .nav-bar {
+        min-width: 10em;
+        width: 20vw;
+        height: 95vh;
+        right: 2.5vh;
+        top: 2.5vh;
+    }
+    .nav-bar > ul {
+        width: 100%;
+        margin-right: 0;
+        /* remove margin that puts a space to the right of menu items in mobile view */
+        margin-top: calc(50vh - 4.5em);
+        /* vertically centered by calculating 50% of parent element height minus 50% of element height */
+        /* 4.5em calculated by halving the height of the nav text's (.nav-bar > ul > li) 3 list items (height 2em each) and 3 padding top (1em each) = 9em */
+    }
+    .nav-bar > ul > li {
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 2em;
+        padding-top: 1em;
+    }
+    #nav-logo {
+        height: 20vmin;
+        width: 20vmin;
+        left: -10vmin;
+        /* top: 7vmin; */
+        top: calc(25vh - 3rem - 10vmin)
+        /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
+    }
+
+    #nav-logo img {
+        margin-left: -10vmin;
+    }
+
+    @media screen and (max-height: 380px) {
+        #nav-logo {
+            display: none;
+            /* For now, we're hiding the logo when the window height is prohibitively low */
+        }
+    }
+
+    /* Changing section/content to fit with nav for desktop/landscape */
+
+    section {
+        padding-right: calc(20vw + 2.5vh + 20px);
+    }
+
+    h1 {
+        max-width: calc(100vw - 15rem);
+    }
+
+    #about > p {
+        max-width: calc(100vw - 15rem);
+    }
+
+}

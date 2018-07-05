@@ -66,7 +66,7 @@
 #nav-logo img {
     height: 100%;
     margin: 0 auto;
-    margin-left: -7.5vmin;
+    margin-left: -1vmin;
     /* centring image as the image is landscape (width is 2x height = 30vmin) so needs to be moved -7.5vmin */
 }
 
@@ -133,13 +133,13 @@
         height: 20vmin;
         width: 20vmin;
         left: -10vmin;
-        /* top: 7vmin; */
+        top: 7vmin;
         top: calc(25vh - 3rem - 10vmin)
         /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
     }
 
     #nav-logo img {
-        margin-left: -10vmin;
+        margin-left: -1.29vmin;
     }
 
     @media screen and (max-height: 380px) {

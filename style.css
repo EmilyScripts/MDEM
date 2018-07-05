@@ -2,9 +2,17 @@
 html {
     box-sizing: border-box;
   }
-  *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+    border: 2px solid red;
+}
+
+/* Clearfix hack */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /* Navigation - mobile first*/
 

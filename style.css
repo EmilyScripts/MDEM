@@ -1,4 +1,11 @@
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 /* Navigation - mobile first*/
 
 .nav-bar {
@@ -102,12 +109,110 @@
 }
 
 
+/*main*/
+main {
+    font-size: 1.5rem;
+}
+
+section {
+    /*border: 1px solid red;*/
+    padding-top: 3.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+h1 {
+    font-size: 3rem;
+    /* margin: 100px auto 50px auto; */
+    top: 10vh;
+    text-align: center;
+    height: 50vh;
+    border: 1px solid blue;
+    /* padding-top: calc((100%-3rem)/2); */
+}
+
+#about > p {
+    text-align: center;
+    height: 50vh;
+}
+
+.centre-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    font-size: 2rem;
+    width: 50vw;
+    margin-right: 20%;
+    margin-left: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+    /*border: 1px solid gold;*/
+}
+
+
+
+p {
+    font-size: 1.25rem;
+}
+
+#about {
+    background-color: #73b3e6;
+    /* padding-top: 5.5rem;
+    padding-bottom: 2rem; */
+    height: 100vh;
+}
+
+#team {
+    background-color: lightpink;
+}
+
+.member {
+    /*border: 1px solid pink;*/
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.memberpicture {
+    height: 50vw;
+    /* height: calc(45vw - 2.5vh - 20px); */
+    width: auto;
+    margin: 0 5% 0 5%;
+    display: inline-block;
+}
+
+.memberlogo {
+    height: auto;
+    width: 80%;
+    /* display: flex; */
+    /* padding: 10%; */
+    margin: 3px;
+}
+
+.logonav {
+    width: calc(20% - 2px);
+    height: 50vw;
+    /*border: 1px solid green;*/
+    position: inline;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 10%; */
+    /* padding-bottom: 10%; */
+}
+
+
 
 /* NAV MEDIA QUERIES - for width OVER 600px (i.e. "non-mobile") */
 /* May want to update media query to REM units */
 
-@media screen and (min-width: 600px) {
-    /* Screen res wider than 600px */
+@media screen and (min-width: 680px) {
+    /* Screen res wider than 680px */
     .nav-bar {
         min-width: 10em;
         width: 20vw;
@@ -148,77 +253,23 @@
             /* For now, we're hiding the logo when the window height is prohibitively low */
         }
     }
-}
 
+    /* Changing section/content to fit with nav for desktop/landscape */
 
-/*main*/
-main {
-    font-size: 1.5rem;
-}
+    section {
+        padding-right: calc(20vw + 2.5vh + 20px);
+    }
 
-section {
-    /*border: 1px solid red;*/
-    padding: 10%;
-}
+    h1 {
+        max-width: calc(100vw - 15rem);
+    }
 
-h1 {
-    font-size: 3rem;
-    margin: 100px auto 50px auto;
-    top: 10vh;
-    text-align: center;
-    height: 45vh;
-    border: 1px solid blue;*/
-}
+    #about > p {
+        max-width: calc(100vw - 15rem);
+    }
 
-h3 {
-    font-size: 2rem;
-    width: 80%;
-    text-align: center;
-    /*border: 1px solid gold;*/
+    /*for main member img resize*/
+    .memberpicture {
+        height: calc(45vw - 2.5vh - 20px);
+    }
 }
-
-p {
-    font-size: 1.25rem;
-}
-
-#about {
-    background-color: #73b3e6;
-}
-
-#team {
-    background-color: lightpink;
-}
-
-.member {
-    /*border: 1px solid pink;*/
-    width: 100%;
-    margin-top: 10%;
-}
-
-.memberpicture {
-    height: auto;
-    width: 70%;
-    margin: 5%;
-    display: inline-block;
-}
-
-.memberlogo {
-    height: auto;
-    width: 80%;
-    /*display: flex;*/
-    padding: 10%;
-}
-
-.logonav {
-    width: calc(20% - 2px);
-    height: auto;
-    /*border: 1px solid green;*/
-    position: inline;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-/*need to add media queries*/
->>>>>>> master

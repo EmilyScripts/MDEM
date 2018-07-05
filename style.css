@@ -36,24 +36,24 @@
     background-color:#6d6d6d;
 }
 
-@media screen and (min-width: 600px) {
-    .nav-bar {
-        width: 10em;
-        height: 100%;
-        right: 0;
-        top: 0;
-    }
-    .nav-bar > ul {
-        width: 100%;
-        margin-top: calc(50vh - 4.5em);
-        /* vertically centered by calculating 50% of viewport height minus 50% of element height */
-    }
-    .nav-bar > ul > li {
-        display: block;
-        margin: 0 auto 0 auto;
-        height: 2em;
-        padding-top: 1em;
-    }
+
+
+/* NAV LOGO */
+#logo {
+    border-radius: 50%;
+    border: 3px solid gainsboro;
+    height: 20vmin;
+    width: 20vmin;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    overflow: hidden;
+}
+
+#logo img {
+    height: 100%;
+    margin: 0 auto;
+    margin-left: -10vmin;
 }
 
 /* A11Y */
@@ -80,6 +80,32 @@
 }
 
 
+
+/* NAV MEDIA QUERIES */
+
+@media screen and (min-width: 600px) {
+    .nav-bar {
+        min-width: 10em;
+        width: 20vw;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+    .nav-bar > ul {
+        width: 100%;
+        margin-top: calc(50vh - 4.5em);
+        /* vertically centered by calculating 50% of viewport height minus 50% of element height */
+    }
+    .nav-bar > ul > li {
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 2em;
+        padding-top: 1em;
+    }
+    #logo {
+        left: -10vmin;
+        top: 7vmin;
+    }
+}
+
 /* Main */
-
-

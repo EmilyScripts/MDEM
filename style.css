@@ -165,16 +165,32 @@ main {
 
 section {
     /*border: 1px solid red;*/
-    padding: 10%;
+    padding-top: 3.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
+
 
 h1 {
     font-size: 3rem;
-    margin: 100px auto 50px auto;
+    /* margin: 100px auto 50px auto; */
     top: 10vh;
     text-align: center;
-    height: 45vh;
-    border: 1px solid blue;*/
+    height: 50vh;
+    border: 1px solid blue;
+    /* padding-top: calc((100%-3rem)/2); */
+}
+
+#about > p {
+    text-align: center;
+    height: 50vh;
+}
+
+.centre-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 h3 {
@@ -184,12 +200,17 @@ h3 {
     /*border: 1px solid gold;*/
 }
 
+
+
 p {
     font-size: 1.25rem;
 }
 
 #about {
     background-color: #73b3e6;
+    /* padding-top: 5.5rem;
+    padding-bottom: 2rem; */
+    height: 100vh;
 }
 
 #team {
@@ -199,7 +220,8 @@ p {
 .member {
     /*border: 1px solid pink;*/
     width: 100%;
-    margin-top: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .memberpicture {

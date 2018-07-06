@@ -294,6 +294,11 @@ input[type=submit]:focus {
     padding: 20px;
 }
 
+/* SUBMIT FORM SUCCESS CSS - ADDED BY DOM AND EMILY */
+.success-hidden {
+    display: none;
+}
+
 
 /*need to add media queries*/
 

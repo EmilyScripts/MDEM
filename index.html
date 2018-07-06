@@ -76,18 +76,21 @@
         <section id="contact">
             <h2>Don't paws, call us today!</h2>
             <form id="contact-form">
-                <label for="name">Your Name</label>
+                <label for="name" id="form-name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name..">
                 <label for="email">Your Email</label>
                 <input type="text" id="email" name="email" placeholder="You@email.com"> 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Your message.."></textarea>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit-btn">
             </form>
+            <p aria-hidden="true" id="success-message" class="success-hidden">Form submitted!</p>
+            <div></div>
         </section>
     </main>
     <footer>
     </footer>
     <script src="script.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>

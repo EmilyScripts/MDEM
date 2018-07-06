@@ -71,7 +71,7 @@ html {
     display: block;
     border-radius: 50%;
     /* circle */
-    border: 3px solid gainsboro;
+    /* border: 3px solid gainsboro; */
     height: 15vmin;
     width: 15vmin;
     position: absolute;
@@ -126,10 +126,11 @@ main {
 }
 
 section {
-    /*border: 1px solid red;*/
-    padding-top: 3.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 3.5rem;
+}
+
+#contact {
+    padding-bottom: 0;
 }
 
 
@@ -142,11 +143,13 @@ h1 {
     font-weight: 700;
     height: 50vh;
     /* padding-top: calc((100%-3rem)/2); */
+    background: yellow;
 }
 
 #about > p {
     text-align: center;
     height: 50vh;
+    background: red;
 }
 
 .centre-vertically {
@@ -186,6 +189,8 @@ p {
     height: 100vh;
 }
 
+/* TEAM SECTION */
+
 #team {
     background-color: lightpink;
 }
@@ -200,19 +205,45 @@ p {
     transform: rotate(0.05turn);
 }
 
+#team > .section-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .member {
-    /*border: 1px solid pink;*/
+    /* border: 1px solid pink; */
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.member > h3 {
+    width: 100%;
+}
+
+.member-picture-wrapper {
+    width: 80%;
 }
 
 .memberpicture {
-    height: 50vw;
-    /* height: calc(45vw - 2.5vh - 20px); */
-    width: auto;
-    margin: 0 5% 0 5%;
-    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.logonav {
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid green; */
+    position: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-top: 10%; */
+    /* padding-bottom: 10%; */
 }
 
 .memberlogo {
@@ -227,18 +258,6 @@ p {
 a:focus > .memberlogo,
 a:hover > .memberlogo {
     filter: invert(100%);
-}
-
-.logonav {
-    width: calc(20% - 2px);
-    height: 50vw;
-    /*border: 1px solid green;*/
-    position: inline;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    /* padding-top: 10%; */
-    /* padding-bottom: 10%; */
 }
 
 /* Contact form */
@@ -346,8 +365,17 @@ input[type=submit]:focus {
 
     /* Changing section/content to fit with nav for desktop/landscape */
 
-    section > * {
-       width: calc(75vw - 10vmin);
+    #about > *,
+    .section-wrapper {
+       width: calc(70vw - 10vmin);
+       justify-content: space-between;
+    }
+
+    /* TEAM SECTION */
+
+    .member {
+       width: 45%;
+       overflow: hidden;
     }
 
     /*
@@ -363,4 +391,22 @@ input[type=submit]:focus {
     .memberpicture {
         height: calc(45vw - 2.5vh - 20px);
     } */
+}
+
+@media screen and (min-width:900px) {
+
+    #team {
+        min-height: 100vh;
+    }
+
+    #team > .section-wrapper {
+        height: 100%;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
+
+    .member {
+        width: 20%;
+        overflow: hidden;
+     } 
 }

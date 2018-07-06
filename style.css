@@ -71,7 +71,7 @@ html {
     display: block;
     border-radius: 50%;
     /* circle */
-    border: 3px solid gainsboro;
+    /* border: 3px solid gainsboro; */
     height: 15vmin;
     width: 15vmin;
     position: absolute;
@@ -126,11 +126,10 @@ main {
 }
 
 section {
-    /*border: 1px solid red;*/
-    padding-top: 3.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 3.5rem;
 }
+
+
 
 
 h1 {
@@ -140,8 +139,12 @@ h1 {
     text-align: center;
     /* border: 1px solid blue; */
     font-weight: 700;
-    height: 50vh;
     /* padding-top: calc((100%-3rem)/2); */
+    margin-bottom: 1em;
+}
+
+#about {
+    padding-top: 25vh;
 }
 
 #about > p {
@@ -159,7 +162,6 @@ h1 {
 h2 {
     font-size: 2.5rem;
     text-align: center;
-
 }
 
 h3 {
@@ -177,6 +179,8 @@ h3 {
 
 p {
     font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 #about {
@@ -186,8 +190,15 @@ p {
     height: 100vh;
 }
 
+/* TEAM SECTION */
+
 #team {
     background-color: lightpink;
+}
+
+#team-header {
+    width: 100%;
+    margin: 1em auto 1em auto;
 }
 
 #team a {
@@ -200,45 +211,58 @@ p {
     transform: rotate(0.05turn);
 }
 
+#team > .section-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .member {
-    /*border: 1px solid pink;*/
+    /* border: 1px solid pink; */
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.member > h3 {
+    width: 100%;
+}
+
+.member-picture-wrapper {
+    width: 80%;
 }
 
 .memberpicture {
-    height: 50vw;
-    /* height: calc(45vw - 2.5vh - 20px); */
-    width: auto;
-    margin: 0 5% 0 5%;
-    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.logonav {
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid green; */
+    position: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-top: 10%; */
+    /* padding-bottom: 10%; */
 }
 
 .memberlogo {
     height: auto;
     width: 80%;
     /*display: flex;*/
-    padding: 10%;
-    filter: invert(100%) brightness(75%);
+    padding: 10%;;
     margin: 3px;
 }
 
 a:focus > .memberlogo,
 a:hover > .memberlogo {
     filter: invert(100%);
-}
-
-.logonav {
-    width: calc(20% - 2px);
-    height: 50vw;
-    /*border: 1px solid green;*/
-    position: inline;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    /* padding-top: 10%; */
-    /* padding-bottom: 10%; */
 }
 
 /* Contact form */
@@ -259,7 +283,8 @@ input[type=text], textarea {
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-size: 1.25rem;
 }
 
 textarea {
@@ -279,6 +304,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -329,7 +355,7 @@ input[type=submit]:focus {
         width: 20vmin;
         left: -10vmin;
         /* top: 7vmin; */
-        top: calc(25vh - 3rem - 10vmin)
+        top: calc(25vh - 3rem - 10vmin);
         /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
     }
 
@@ -346,10 +372,30 @@ input[type=submit]:focus {
 
     /* Changing section/content to fit with nav for desktop/landscape */
 
-    section {
-        padding-right: calc(20vw + 2.5vh + 20px);
+    #about > *,
+    .section-wrapper {
+       width: calc(70vw - 10vmin);
+       justify-content: space-between;
     }
 
+    /* ABOUT SECTION */
+
+
+
+    /* TEAM SECTION */
+
+    .member {
+       width: 45%;
+       overflow: hidden;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 0 auto 2em auto;
+    }
+    
+
+    /*
     h1 {
         max-width: calc(100vw - 15rem);
     }
@@ -358,8 +404,26 @@ input[type=submit]:focus {
         max-width: calc(100vw - 15rem);
     }
 
-    /*for main member img resize*/
+   
     .memberpicture {
         height: calc(45vw - 2.5vh - 20px);
+    } */
+}
+
+@media screen and (min-width:900px) {
+
+    #team {
+        min-height: 100vh;
     }
+
+    #team > .section-wrapper {
+        height: 100%;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
+
+    .member {
+        width: 20%;
+        overflow: hidden;
+     } 
 }

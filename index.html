@@ -32,58 +32,74 @@
     </nav>
     <main>
         <section id="about">
-            <h1 class="centre-vertically">Building beautiful, accessible websites since 2018 with our bear hands</h1>
-            <p class="centre-vertically">Hire the only non human development team in London. You won't catch us lion around.</p>
+            <div class="section-wrapper">
+                <h1>MDEM</h1>
+                <p class="centre-vertically">Building beautiful, accessible websites since 2018 with our bear hands.</p>
+                <p>Hire the only non human development team in London! You won't catch us lion around.</p>
+            </div>
         </section>
         <section id="team">
-            <article class="member">
-                <h3>Michael</h3>
-                <img src="assets/michael.png" class="memberpicture" alt="michael the sheep">
-                <nav class="logonav centre-vertically">
-                    <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
-                    <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
-                    <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
-                </nav>
-            </article>
-            <article class="member">
-                <h3>Dom</h3>
-                <img src="assets/dom.png" class="memberpicture" alt="dom the pig">
-                <nav class="logonav  centre-vertically">
-                    <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
-                    <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
-                    <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
-                </nav>
-            </article>
-            <article class="member">
-                <h3>Monika</h3>
-                <img src="assets/monika.png" class="memberpicture" alt="monika the lion">
-                <nav class="logonav  centre-vertically">
-                    <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
-                    <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
-                    <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
-                </nav>
-            </article>
-            <article class="member">
-                <h3>Emily</h3>
-                <img src="assets/emily.png" class="memberpicture" alt="emily the panda">
-                <nav class="logonav  centre-vertically">
-                    <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
-                    <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
-                    <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
-                </nav>
-            </article>
+            <div class="section-wrapper">
+                <h2 id="team-header">Meet the team</h2>
+                <article class="member">
+                    <h3>Michael</h3>
+                    <div class="member-picture-wrapper">
+                        <img src="assets/michael.png" class="memberpicture" alt="michael the sheep">
+                    </div>
+                    <nav class="logonav centre-vertically">
+                        <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
+                        <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
+                        <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
+                    </nav>
+                </article>
+                <article class="member">
+                    <h3>Dom</h3>
+                    <div class="member-picture-wrapper">
+                        <img src="assets/dom.png" class="memberpicture" alt="dom the pig">
+                    </div>
+                    <nav class="logonav  centre-vertically">
+                        <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
+                        <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
+                        <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
+                    </nav>
+                </article>
+                <article class="member">
+                    <h3>Monika</h3>
+                    <div class="member-picture-wrapper">
+                        <img src="assets/monika.png" class="memberpicture" alt="monika the lion">
+                    </div>
+                    <nav class="logonav  centre-vertically">
+                        <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
+                        <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
+                        <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
+                    </nav>
+                </article>
+                <article class="member">
+                    <h3>Emily</h3>
+                    <div class="member-picture-wrapper">
+                        <img src="assets/emily.png" class="memberpicture" alt="emily the panda">
+                    </div>
+                    <nav class="logonav  centre-vertically">
+                        <a href="https://www.codewars.com"><img src="assets/codewars.svg" class="memberlogo" alt="codewars profile"></a>
+                        <a href="https://www.github.com"><img src="assets/github.svg" class="memberlogo" alt="github profile"></a>
+                        <a href="https://www.linkedin.com"><img src="assets/linkedin.svg" class="memberlogo" alt="linkedin profile"></a>
+                    </nav>
+                </article>
+            </div>
         </section>
         <section id="contact">
-            <h2>Don't paws, call us today!</h2>
-            <form id="contact-form">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
-                <label for="email">Your Email</label>
-                <input type="text" id="email" name="email" placeholder="You@email.com"> 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Your message.."></textarea>
-                <input type="submit" value="Submit">
-            </form>
+            <div class="section-wrapper">
+                <h2>Don't paws, message us today!</h2>
+                <form id="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <label for="email">Your Email</label>
+                    <input type="text" id="email" name="email" placeholder="You@email.com"> 
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message.."></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
     </main>
     <footer>

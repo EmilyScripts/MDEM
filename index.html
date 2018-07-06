@@ -76,7 +76,7 @@
         <section id="contact">
             <h2>Don't paws, call us today!</h2>
             <form id="contact-form">
-                <label for="name" id="form-name">Your Name</label>
+                <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name..">
                 <label for="email">Your Email</label>
                 <input type="text" id="email" name="email" placeholder="You@email.com"> 
@@ -85,6 +85,9 @@
                 <input type="submit" value="Submit" id="submit-btn">
             </form>
             <p aria-hidden="true" id="success-message" class="success-hidden">Form submitted!</p>
+            <p aria-hidden="true" id="name-error" class="success-hidden">Please enter your name!</p>
+            <p aria-hidden="true" id="email-error" class="success-hidden">Please enter a valid email address!</p>
+            <p aria-hidden="true" id="message-error" class="success-hidden">Please enter a message!</p>
             <div></div>
         </section>
     </main>

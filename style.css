@@ -346,10 +346,11 @@ input[type=submit]:focus {
 
     /* Changing section/content to fit with nav for desktop/landscape */
 
-    section {
-        padding-right: calc(20vw + 2.5vh + 20px);
+    section > * {
+       width: calc(75vw - 10vmin);
     }
 
+    /*
     h1 {
         max-width: calc(100vw - 15rem);
     }
@@ -358,8 +359,8 @@ input[type=submit]:focus {
         max-width: calc(100vw - 15rem);
     }
 
-    /*for main member img resize*/
+   
     .memberpicture {
         height: calc(45vw - 2.5vh - 20px);
-    }
+    } */
 }

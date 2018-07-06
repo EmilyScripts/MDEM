@@ -129,9 +129,7 @@ section {
     padding: 3.5rem;
 }
 
-#contact {
-    padding-bottom: 0;
-}
+
 
 
 h1 {
@@ -141,15 +139,17 @@ h1 {
     text-align: center;
     /* border: 1px solid blue; */
     font-weight: 700;
-    height: 50vh;
     /* padding-top: calc((100%-3rem)/2); */
-    background: yellow;
+    margin-bottom: 1em;
+}
+
+#about {
+    padding-top: 25vh;
 }
 
 #about > p {
     text-align: center;
     height: 50vh;
-    background: red;
 }
 
 .centre-vertically {
@@ -162,7 +162,6 @@ h1 {
 h2 {
     font-size: 2.5rem;
     text-align: center;
-
 }
 
 h3 {
@@ -180,6 +179,8 @@ h3 {
 
 p {
     font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 #about {
@@ -193,6 +194,11 @@ p {
 
 #team {
     background-color: lightpink;
+}
+
+#team-header {
+    width: 100%;
+    margin: 1em auto 1em auto;
 }
 
 #team a {
@@ -348,7 +354,7 @@ input[type=submit]:focus {
         width: 20vmin;
         left: -10vmin;
         /* top: 7vmin; */
-        top: calc(25vh - 3rem - 10vmin)
+        top: calc(25vh - 3rem - 10vmin);
         /* centred the logo between top of page (top of nav) and the first text item (top of ul, ignoring padding). Complex, but FYI: Height between top of nav bar and top of text is 50vh - 4em (which is 6rem). To centre the logo, its top position must be half of this height, minus half its own height (20vmin/2) */
     }
 
@@ -371,12 +377,22 @@ input[type=submit]:focus {
        justify-content: space-between;
     }
 
+    /* ABOUT SECTION */
+
+
+
     /* TEAM SECTION */
 
     .member {
        width: 45%;
        overflow: hidden;
     }
+
+    h2 {
+        width: 100%;
+        margin: 0 auto 2em auto;
+    }
+    
 
     /*
     h1 {

@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
     <title>MDEM: Animal Developers</title>
 </head>
 <body>
@@ -97,13 +96,16 @@
                     <input type="text" id="email" name="email" placeholder="You@email.com"> 
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Your message.."></textarea>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="submit-btn">
                 </form>
+                <p aria-hidden="true" id="success-message" class="success-hidden">Form submitted!</p>
+                <p aria-hidden="true" id="name-error" class="success-hidden">Please enter your name!</p>
+                <p aria-hidden="true" id="email-error" class="success-hidden">Please enter a valid email address!</p>
+                <p aria-hidden="true" id="message-error" class="success-hidden">Please enter a message!</p>
             </div>
         </section>
     </main>
-    <footer>
-    </footer>
     <script src="script.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>
